@@ -1,5 +1,5 @@
 //
-//  SecondView.swift
+//  MoonView.swift
 //  CSE335Lab2
 //
 //  Created by Arjun Dadhwal on 2/2/23.
@@ -7,20 +7,20 @@
 
 import SwiftUI
 
-struct SecondView: View {
+struct MoonView: View {
     // access the "dismiss" function from the NavigationView, when called this
     // function will pop the current view from the navigation stack
     @Environment(\.dismiss) var dismiss
     
     // this variable stores the data received from ContentView
-    var dataFromFirst: String
+    var dataFromEarth: String
     // this binding allows to send data back to the ContentView
-    @Binding var dataSecond: String
+    @Binding var dataMoon: String
     
     var body: some View {
         VStack{
             Spacer()
-            Text(dataFromFirst)
+            Text(dataFromEarth)
             Spacer()
             Button("Go back to ContentView") {
                 dataSecond = "Hello from SecondView"
@@ -45,8 +45,8 @@ struct SecondView: View {
               
             Spacer()
         }
-        .navigationTitle("SecondView")
-        .navigationBarTitleDisplayMode(.inline)
+       // .navigationTitle("SecondView")
+    // .navigationBarTitleDisplayMode(.inline)
         .onAppear {
             print(dataFromFirst)
             
@@ -57,6 +57,6 @@ struct SecondView: View {
 
 struct SecondView_Previews: PreviewProvider {
     static var previews: some View {
-        SecondView(dataFromFirst: "Some string", dataSecond: .constant(""))
+        MoonView(dataFromFirst: "Some string", dataSecond: .constant(""))
     }
 }
