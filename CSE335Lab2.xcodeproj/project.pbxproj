@@ -14,7 +14,7 @@
 		8238E5E6298C7F7200D9D8BD /* CSE335Lab2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8238E5E5298C7F7200D9D8BD /* CSE335Lab2Tests.swift */; };
 		8238E5F0298C7F7300D9D8BD /* CSE335Lab2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8238E5EF298C7F7300D9D8BD /* CSE335Lab2UITests.swift */; };
 		8238E5F2298C7F7300D9D8BD /* CSE335Lab2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8238E5F1298C7F7300D9D8BD /* CSE335Lab2UITestsLaunchTests.swift */; };
-		8238E601298C806300D9D8BD /* ThirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8238E600298C806300D9D8BD /* ThirdView.swift */; };
+		8238E601298C806300D9D8BD /* JupiterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8238E600298C806300D9D8BD /* JupiterView.swift */; };
 		8238E603298C821700D9D8BD /* MoonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8238E602298C821700D9D8BD /* MoonView.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,7 +46,7 @@
 		8238E5EB298C7F7300D9D8BD /* CSE335Lab2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CSE335Lab2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8238E5EF298C7F7300D9D8BD /* CSE335Lab2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSE335Lab2UITests.swift; sourceTree = "<group>"; };
 		8238E5F1298C7F7300D9D8BD /* CSE335Lab2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSE335Lab2UITestsLaunchTests.swift; sourceTree = "<group>"; };
-		8238E600298C806300D9D8BD /* ThirdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdView.swift; sourceTree = "<group>"; };
+		8238E600298C806300D9D8BD /* JupiterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JupiterView.swift; sourceTree = "<group>"; };
 		8238E602298C821700D9D8BD /* MoonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,7 +98,7 @@
 		8238E5D3298C7F7200D9D8BD /* CSE335Lab2 */ = {
 			isa = PBXGroup;
 			children = (
-				8238E600298C806300D9D8BD /* ThirdView.swift */,
+				8238E600298C806300D9D8BD /* JupiterView.swift */,
 				8238E602298C821700D9D8BD /* MoonView.swift */,
 				8238E5D4298C7F7200D9D8BD /* CSE335Lab2App.swift */,
 				8238E5D6298C7F7200D9D8BD /* EarthView.swift */,
@@ -263,7 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8238E601298C806300D9D8BD /* ThirdView.swift in Sources */,
+				8238E601298C806300D9D8BD /* JupiterView.swift in Sources */,
 				8238E5D7298C7F7200D9D8BD /* EarthView.swift in Sources */,
 				8238E603298C821700D9D8BD /* MoonView.swift in Sources */,
 				8238E5D5298C7F7200D9D8BD /* CSE335Lab2App.swift in Sources */,

@@ -36,7 +36,7 @@ struct MoonView: View {
                     // Pass the state variable "dataFromSecond" as binding to the
                     // SecondView, doing so will allow the ContentView to stay
                     // updated on the changes made to this variable
-                    ThirdView(dataFrom_Second: "Hello From Second")
+                    JupiterView(dataFrom_Second: "Hello From Second")
             }
             .padding()
             .foregroundColor(.blue)
