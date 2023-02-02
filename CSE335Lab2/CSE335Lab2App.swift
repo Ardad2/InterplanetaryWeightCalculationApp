@@ -11,7 +11,7 @@ import SwiftUI
 struct CSE335Lab2App: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            EarthView()
         }
     }
 }

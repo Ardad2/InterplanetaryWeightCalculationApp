@@ -23,7 +23,7 @@ struct MoonView: View {
             Text(dataFromEarth)
             Spacer()
             Button("Go back to ContentView") {
-                dataSecond = "Hello from SecondView"
+                dataMoon = "Hello from SecondView"
                 dismiss()
                     
             }.padding()
@@ -48,15 +48,15 @@ struct MoonView: View {
        // .navigationTitle("SecondView")
     // .navigationBarTitleDisplayMode(.inline)
         .onAppear {
-            print(dataFromFirst)
+            print(dataFromEarth)
             
         }
     }
 }
 
 
-struct SecondView_Previews: PreviewProvider {
+struct MoonView_Previews: PreviewProvider {
     static var previews: some View {
-        MoonView(dataFromFirst: "Some string", dataSecond: .constant(""))
+        MoonView(dataFromEarth: "Some string", dataMoon: .constant(""))
     }
 }
