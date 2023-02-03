@@ -14,13 +14,19 @@ struct MoonView: View {
     
     // this variable stores the data received from ContentView
     var weightEarth: Float
+    var weightMoon: Float { (weightEarth/9.81) * 1.622 }
     // this binding allows to send data back to the ContentView
     @Binding var dataMoon: Int
     
     var body: some View {
         VStack{
+            VStack() {
+                Text("You are on the moon")
+            }
             Spacer()
-            Text("\(weightEarth)")
+            Text("Your weight on Earth is... \(weightEarth)")
+            Spacer()
+            Text("Your weight on Moon is... \(weightMoon)")
             Spacer()
             Button("Go to Earth") {
                 dataMoon = 1
