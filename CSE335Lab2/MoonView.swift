@@ -27,11 +27,11 @@ struct MoonView: View {
         VStack{
             
             VStack {
+                Text("You are on the moon");
                 if (comeToMoon == 2)
                 {
                     Text("Coming from Jupiter")
                 }
-                Text("You are on the moon");
                 Image("Moon").resizable().aspectRatio(contentMode: .fit).frame(height: 150)
             }
 
@@ -46,7 +46,7 @@ struct MoonView: View {
                 Text("I feel much lighter !");
                 Spacer()
                 NavigationLink("Go to Jupiter") {
-                    JupiterView(weightEarth: weightEarth, weightMoon: weightMoon, dataJupiter: .constant(1))
+                    JupiterView(weightEarth: weightEarth, weightMoon: weightMoon, dataJupiter: $comeToMoon)
                 }
                 .padding()
                 .foregroundColor(.blue)
