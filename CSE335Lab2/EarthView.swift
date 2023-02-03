@@ -11,7 +11,8 @@ import SwiftUI
 struct EarthView: View {
     // This variable is responsible for tracking the data sent from SecondView
     @State private var dataFromMoon = "";
-    @State var weight: String = "";
+    @State var weightOnEarth: String = "";
+    @State var comingFrom: Int = 0;
     
     var body: some View {
         // NOTE: to navigate between views, the root view needs to be embedded
@@ -23,10 +24,19 @@ struct EarthView: View {
                     Text("Welcome to Space Walk App")
                     
                     Text("You are on earth now")
+                    if (comingFrom == 1)
+                    {
+                    Text("Coming from the moon")
+
+                    }
+                    else if (comingFrom == 2)
+                    {
+                    Text("Coming from Jupiter")
+                    }
                 }
                 HStack{
                     Text("Enter your weight: ");
-                    TextField("", text: $weight).keyboardType(.decimalPad) .textFieldStyle(.roundedBorder);
+                    TextField("", text: $weightOnEarth).keyboardType(.decimalPad) .textFieldStyle(.roundedBorder);
                 }
                 VStack {
                     Spacer()

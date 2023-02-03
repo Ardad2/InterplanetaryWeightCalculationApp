@@ -43,8 +43,9 @@ struct MoonView: View {
               
             Spacer()
         }
-       // .navigationTitle("SecondView")
-    // .navigationBarTitleDisplayMode(.inline)
+        .navigationBarHidden(true)
+        .navigationTitle("Moon")
+     .navigationBarTitleDisplayMode(.inline)
         .onAppear {
             print(dataFromEarth)
             
