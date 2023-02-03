@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+
+
 struct MoonView: View {
     // access the "dismiss" function from the NavigationView, when called this
     // function will pop the current view from the navigation stack
@@ -18,36 +20,47 @@ struct MoonView: View {
     // this binding allows to send data back to the ContentView
     @Binding var dataMoon: Int
     
+    @State var comeToMoon: Int = 0;
+
+    
     var body: some View {
         VStack{
-            VStack() {
-                Text("You are on the moon")
-            }
-            Spacer()
-            Text("Your weight on Earth is... \(weightEarth)")
-            Spacer()
-            Text("Your weight on Moon is... \(weightMoon)")
-            Spacer()
-            Button("Go to Earth") {
-                dataMoon = 1
-                dismiss()
-                    
-            }.padding()
-             .foregroundColor(.green)
-             .cornerRadius(10)
             
-            Spacer()
-            NavigationLink("Go to Jupiter") {
-                    // Pass the state variable "dataFromSecond" as binding to the
-                    // SecondView, doing so will allow the ContentView to stay
-                    // updated on the changes made to this variable
-                    JupiterView(dataFromMoon: "Hello From Second")
+            VStack {
+                if (comeToMoon == 2)
+                {
+                    Text("Coming from Jupiter")
+                }
+                Text("You are on the moon");
+                Image("Moon").resizable().aspectRatio(contentMode: .fit).frame(height: 150)
             }
-            .padding()
-            .foregroundColor(.blue)
-            .cornerRadius(10)
+
+            VStack {
+                Text("Your weight on Earth is... \(weightEarth)")
+                Spacer()
+                Text("Your weight on Moon is... \(weightMoon)")
+                Spacer()
+            }
+            
+            VStack {
+                Text("I feel much lighter !");
+                Spacer()
+                NavigationLink("Go to Jupiter") {
+                    JupiterView(dataFromMoon: "Hello From Second")
+                }
+                .padding()
+                .foregroundColor(.blue)
+                .cornerRadius(10)
+                
+                Button("Go to Earth") {
+                    dataMoon = 1
+                    dismiss()
+                    
+                }.padding()
+                    .foregroundColor(.blue)
+                    .cornerRadius(10)
+            }
               
-            Spacer()
         }
         .navigationBarHidden(true)
         .navigationTitle("Moon")
@@ -58,6 +71,8 @@ struct MoonView: View {
         }
     }
 }
+
+
 
 
 struct MoonView_Previews: PreviewProvider {
