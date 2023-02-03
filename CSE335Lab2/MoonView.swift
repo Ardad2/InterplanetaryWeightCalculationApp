@@ -46,7 +46,7 @@ struct MoonView: View {
                 Text("I feel much lighter !");
                 Spacer()
                 NavigationLink("Go to Jupiter") {
-                    JupiterView(dataFromMoon: "Hello From Second")
+                    JupiterView(weightEarth: weightEarth, weightMoon: weightMoon, dataJupiter: .constant(1))
                 }
                 .padding()
                 .foregroundColor(.blue)

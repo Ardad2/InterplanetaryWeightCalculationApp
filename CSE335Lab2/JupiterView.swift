@@ -8,14 +8,27 @@
 import SwiftUI
 
 struct JupiterView: View {
-    var dataFromMoon: String
+    
+    @Environment(\.dismiss) var dismiss
+    
+    var weightEarth: Float
+    var weightMoon: Float
+    var weightJupiter: Float { (weightEarth/9.81) * 24.79 }
+    
+    @Binding var dataJupiter: Int
+    
+    @State var comeToJupiter: Int = 0
+
+    
     var body: some View {
-        Text(dataFromMoon)
+        Text("\(weightEarth)");
+        Text("\(weightMoon)");
+        Text("\(weightJupiter)");
     }
 }
 
 struct JupiterView_Previews: PreviewProvider {
     static var previews: some View {
-        JupiterView(dataFromMoon: "")
+        JupiterView(weightEarth: 0.0, weightMoon: 0.0, dataJupiter: .constant(2))
     }
 }
