@@ -13,14 +13,14 @@ struct MoonView: View {
     @Environment(\.dismiss) var dismiss
     
     // this variable stores the data received from ContentView
-    var dataFromEarth: String
+    var weightEarth: Float
     // this binding allows to send data back to the ContentView
     @Binding var dataMoon: Int
     
     var body: some View {
         VStack{
             Spacer()
-            Text(dataFromEarth)
+            Text("\(weightEarth)")
             Spacer()
             Button("Go to Earth") {
                 dataMoon = 1
@@ -47,7 +47,7 @@ struct MoonView: View {
         .navigationTitle("Moon")
      .navigationBarTitleDisplayMode(.inline)
         .onAppear {
-            print(dataFromEarth)
+            print(weightEarth)
             
         }
     }
@@ -56,6 +56,6 @@ struct MoonView: View {
 
 struct MoonView_Previews: PreviewProvider {
     static var previews: some View {
-        MoonView(dataFromEarth: "Some string", dataMoon: .constant(1))
+        MoonView(weightEarth:1.0, dataMoon: .constant(1))
     }
 }

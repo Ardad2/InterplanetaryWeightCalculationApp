@@ -46,7 +46,7 @@ struct EarthView: View {
                     Spacer()
                     NavigationLink("Go to Moon") {
                         MoonView(
-                            dataFromEarth: "Hello from ContentView",
+                            weightEarth: self.weightEarth,
                             dataMoon: $comeToEarth
                             // Binding
                             
