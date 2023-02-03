@@ -11,7 +11,9 @@ import SwiftUI
 struct EarthView: View {
     // This variable is responsible for tracking the data sent from SecondView
     @State private var dataFromMoon = "";
-    @State var weightOnEarth: String = "";
+    @State var weightEarthString: String = "";
+    private var weightEarth: Float { (Float(weightEarthString) ?? 0) }
+    
     @State var comeToEarth: Int = 0;
     
     var body: some View {
@@ -36,7 +38,7 @@ struct EarthView: View {
                 }
                 HStack{
                     Text("Enter your weight: ");
-                    TextField("", text: $weightOnEarth).keyboardType(.decimalPad) .textFieldStyle(.roundedBorder);
+                    TextField("", text: $weightEarthString).keyboardType(.decimalPad) .textFieldStyle(.roundedBorder);
                 }
                 VStack {
                     Spacer()
