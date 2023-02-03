@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct JupiterView: View {
-    var dataFrom_Second: String
+    var dataFromMoon: String
     var body: some View {
-        Text(dataFrom_Second)
+        Text(dataFromMoon)
     }
 }
 
 struct JupiterView_Previews: PreviewProvider {
     static var previews: some View {
-        JupiterView(dataFrom_Second: "")
+        JupiterView(dataFromMoon: "")
     }
 }

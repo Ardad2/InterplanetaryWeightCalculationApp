@@ -22,25 +22,23 @@ struct MoonView: View {
             Spacer()
             Text(dataFromEarth)
             Spacer()
-            Button("Go back to ContentView") {
+            Button("Go to Earth") {
                 dataMoon = "Hello from SecondView"
                 dismiss()
                     
             }.padding()
              .foregroundColor(.green)
-             .border(Color.red, width: 3)
              .cornerRadius(10)
             
             Spacer()
-            NavigationLink("Go to ThirdView") {
+            NavigationLink("Go to Jupiter") {
                     // Pass the state variable "dataFromSecond" as binding to the
                     // SecondView, doing so will allow the ContentView to stay
                     // updated on the changes made to this variable
-                    JupiterView(dataFrom_Second: "Hello From Second")
+                    JupiterView(dataFromMoon: "Hello From Second")
             }
             .padding()
             .foregroundColor(.blue)
-            .border(Color.red, width: 3)
             .cornerRadius(10)
               
             Spacer()
