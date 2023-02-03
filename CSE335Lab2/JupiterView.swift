@@ -19,6 +19,8 @@ struct JupiterView: View {
     
     @State var comeToJupiter: Int = 0
     
+    @Binding var rootActive: Bool
+
     
     var body: some View {
         
@@ -39,10 +41,15 @@ struct JupiterView: View {
             VStack {
                 Text("I feel much heavier !")
                 Spacer()
-                Button("Go to Earth")
+                Button("Go to the Moon")
                 {
                     dataJupiter = 2
                     dismiss()
+                }.padding().foregroundColor(.blue).cornerRadius(10)
+                Button("Go to Earth")
+                {
+                    dataJupiter = 2
+                    rootActive = false
                 }.padding().foregroundColor(.blue).cornerRadius(10)
             }
         }.navigationBarHidden(true)
@@ -52,7 +59,7 @@ struct JupiterView: View {
     
     struct JupiterView_Previews: PreviewProvider {
         static var previews: some View {
-            JupiterView(weightEarth: 0.0, weightMoon: 0.0, dataJupiter: .constant(2))
+            JupiterView(weightEarth: 0.0, weightMoon: 0.0, dataJupiter: .constant(2), rootActive: .constant(false));
         }
     }
 }
