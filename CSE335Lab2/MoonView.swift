@@ -15,7 +15,7 @@ struct MoonView: View {
     // this variable stores the data received from ContentView
     var dataFromEarth: String
     // this binding allows to send data back to the ContentView
-    @Binding var dataMoon: String
+    @Binding var dataMoon: Int
     
     var body: some View {
         VStack{
@@ -23,7 +23,7 @@ struct MoonView: View {
             Text(dataFromEarth)
             Spacer()
             Button("Go to Earth") {
-                dataMoon = "Hello from SecondView"
+                dataMoon = 1
                 dismiss()
                     
             }.padding()
@@ -56,6 +56,6 @@ struct MoonView: View {
 
 struct MoonView_Previews: PreviewProvider {
     static var previews: some View {
-        MoonView(dataFromEarth: "Some string", dataMoon: .constant(""))
+        MoonView(dataFromEarth: "Some string", dataMoon: .constant(1))
     }
 }

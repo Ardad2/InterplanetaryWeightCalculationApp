@@ -12,7 +12,7 @@ struct EarthView: View {
     // This variable is responsible for tracking the data sent from SecondView
     @State private var dataFromMoon = "";
     @State var weightOnEarth: String = "";
-    @State var comingFrom: Int = 0;
+    @State var comeToEarth: Int = 0;
     
     var body: some View {
         // NOTE: to navigate between views, the root view needs to be embedded
@@ -24,12 +24,12 @@ struct EarthView: View {
                     Text("Welcome to Space Walk App")
                     
                     Text("You are on earth now")
-                    if (comingFrom == 1)
+                    if (comeToEarth == 1)
                     {
                     Text("Coming from the moon")
 
                     }
-                    else if (comingFrom == 2)
+                    else if (comeToEarth == 2)
                     {
                     Text("Coming from Jupiter")
                     }
@@ -45,17 +45,14 @@ struct EarthView: View {
                     NavigationLink("Go to Moon") {
                         MoonView(
                             dataFromEarth: "Hello from ContentView",
-                            dataMoon: $dataFromMoon
+                            dataMoon: $comeToEarth
                             // Binding
                             
                         )
                     }.buttonStyle(.borderedProminent)
                     .navigationTitle("ContentView")
                     .navigationBarTitleDisplayMode(.inline)
-                    .onChange(of: dataFromMoon) { data in
-                        print(data)
-                        dataFromMoon = ""
-                    }
+    
                 }
                 .navigationBarHidden(true)
     
