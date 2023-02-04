@@ -16,7 +16,7 @@ struct EarthView: View {
     @State var comeToEarth: Int = 0;
     
     @State private var isActive: Bool = false;
-    @State private var returnJupiter: Bool = false;
+    @State private var earthToJupiter: Bool = false;
     
     
     var body: some View {
@@ -29,7 +29,7 @@ struct EarthView: View {
                     Text("Welcome to Space Walk App")
                     
                     Text("You are on earth now")
-                    if (returnJupiter == true)
+                    if (earthToJupiter == true)
                     {
                         Text("Coming from Jupiter")
                     }
@@ -57,7 +57,7 @@ struct EarthView: View {
                             weightEarth: self.weightEarth,
                             dataMoon: $comeToEarth,
                             rootActive: $isActive,
-                            returnJupiter: $returnJupiter
+                            earthToJupiter: $earthToJupiter
                             // Binding
                             
                         ),
@@ -67,35 +67,6 @@ struct EarthView: View {
                         }).buttonStyle(.borderedProminent)
                         .navigationTitle("ContentView")
                         .navigationBarTitleDisplayMode(.inline)
-                    
-                    /*
-                    NavigationLink(
-                        destination: JupiterView(
-                            weightEarth: self.weightEarth,
-                            weightMoon: 0.0,
-                            dataJupiter: $comeToEarth,
-                            rootActive: $isActive
-                            // Binding
-                            
-                        ),
-                        isActive: $isActive,
-                        label: {Text("Hello")
-                        })
-                    */
-                    
-                    /* NavigationLink("Go to Moon") {
-                     MoonView(
-                     weightEarth: self.weightEarth,
-                     dataMoon: $comeToEarth
-                     // Binding
-                     
-                     )
-                     }.buttonStyle(.borderedProminent)
-                     .navigationTitle("ContentView")
-                     .navigationBarTitleDisplayMode(.inline)
-                     
-                     }
-                     */
                         .navigationBarHidden(true)
                     
                 }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)

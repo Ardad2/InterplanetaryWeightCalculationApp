@@ -19,7 +19,7 @@ struct MoonView: View {
     // this binding allows to send data back to the ContentView
     @Binding var dataMoon: Int
     @Binding var rootActive: Bool
-    @Binding var returnJupiter: Bool
+    @Binding var earthToJupiter: Bool
 
     
     @State var comeToMoon: Int = 0;
@@ -48,23 +48,13 @@ struct MoonView: View {
             VStack {
                 Text("I feel much lighter !");
                 Spacer()
-                NavigationLink("Go to Jupiter", destination:                     JupiterView(weightEarth: weightEarth, weightMoon: weightMoon, dataJupiter: $comeToMoon, rootActive: $rootActive, returnJupiter: $returnJupiter).padding()
+                NavigationLink("Go to Jupiter", destination:                     JupiterView(weightEarth: weightEarth, weightMoon: weightMoon, dataJupiter: $comeToMoon, rootActive: $rootActive, returnJupiter: $earthToJupiter).padding()
                     .foregroundColor(.blue)
                     .cornerRadius(10)
 )
-
-                
-                /*NavigationLink("Go to Jupiter") {
-                    JupiterView(weightEarth: weightEarth, weightMoon: weightMoon, dataJupiter: $comeToMoon)
-                }
-                .padding()
-                .foregroundColor(.blue)
-                .cornerRadius(10)
-                 */
-                
                 Button("Go to Earth") {
                     dataMoon = 1
-                    returnJupiter = false
+                    earthToJupiter = false
                     rootActive = false
 
                 }.padding()
@@ -88,6 +78,6 @@ struct MoonView: View {
 
 struct MoonView_Previews: PreviewProvider {
     static var previews: some View {
-        MoonView(weightEarth:1.0, dataMoon: .constant(1), rootActive: .constant(false), returnJupiter: .constant(false))
+        MoonView(weightEarth:1.0, dataMoon: .constant(1), rootActive: .constant(false), earthToJupiter: .constant(false))
     }
 }
