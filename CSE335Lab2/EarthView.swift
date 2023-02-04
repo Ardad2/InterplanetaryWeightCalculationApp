@@ -69,7 +69,7 @@ struct EarthView: View {
                         .navigationBarTitleDisplayMode(.inline)
                         .navigationBarHidden(true)
                     
-                }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
+                }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
                 
             }
         }

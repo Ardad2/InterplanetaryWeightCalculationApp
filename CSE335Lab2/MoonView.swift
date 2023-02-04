@@ -48,7 +48,7 @@ struct MoonView: View {
             VStack {
                 Text("I feel much lighter !");
                 Spacer()
-                NavigationLink("Go to Jupiter", destination:                     JupiterView(weightEarth: weightEarth, weightMoon: weightMoon, dataJupiter: $comeToMoon, rootActive: $rootActive, returnJupiter: $earthToJupiter).padding()
+                NavigationLink("Go to Jupiter", destination:                     JupiterView(weightEarth: weightEarth, weightMoon: weightMoon, dataJupiter: $comeToMoon, rootActive: $rootActive, earthToJupiter: $earthToJupiter).padding()
                     .foregroundColor(.blue)
                     .cornerRadius(10)
 )
