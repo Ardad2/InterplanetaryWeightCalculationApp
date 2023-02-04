@@ -16,6 +16,7 @@ struct EarthView: View {
     @State var comeToEarth: Int = 0;
     
     @State private var isActive: Bool = false;
+    @State private var returnJupiter: Bool = false;
     
     
     var body: some View {
@@ -28,7 +29,11 @@ struct EarthView: View {
                     Text("Welcome to Space Walk App")
                     
                     Text("You are on earth now")
-                    if (comeToEarth == 1)
+                    if (returnJupiter == true)
+                    {
+                        Text("Coming from Jupiter")
+                    }
+                    else if (comeToEarth == 1)
                     {
                         Text("Coming from the moon")
                         
@@ -39,7 +44,7 @@ struct EarthView: View {
                     }
                 }
                 HStack{
-                    Text("Enter your weight: ");
+                    Text("Enter your weight (in lbs): ");
                     TextField("", text: $weightEarthString).keyboardType(.decimalPad) .textFieldStyle(.roundedBorder);
                 }
                 VStack {
@@ -51,7 +56,8 @@ struct EarthView: View {
                         destination: MoonView(
                             weightEarth: self.weightEarth,
                             dataMoon: $comeToEarth,
-                            rootActive: $isActive
+                            rootActive: $isActive,
+                            returnJupiter: $returnJupiter
                             // Binding
                             
                         ),
@@ -62,6 +68,7 @@ struct EarthView: View {
                         .navigationTitle("ContentView")
                         .navigationBarTitleDisplayMode(.inline)
                     
+                    /*
                     NavigationLink(
                         destination: JupiterView(
                             weightEarth: self.weightEarth,
@@ -72,9 +79,9 @@ struct EarthView: View {
                             
                         ),
                         isActive: $isActive,
-                        label: {
+                        label: {Text("Hello")
                         })
-                    
+                    */
                     
                     /* NavigationLink("Go to Moon") {
                      MoonView(
@@ -103,4 +110,3 @@ struct EarthView: View {
         }
     }
 }
-

@@ -16,6 +16,7 @@
 		8238E5F2298C7F7300D9D8BD /* CSE335Lab2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8238E5F1298C7F7300D9D8BD /* CSE335Lab2UITestsLaunchTests.swift */; };
 		8238E601298C806300D9D8BD /* JupiterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8238E600298C806300D9D8BD /* JupiterView.swift */; };
 		8238E603298C821700D9D8BD /* MoonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8238E602298C821700D9D8BD /* MoonView.swift */; };
+		8238E606298DDF7D00D9D8BD /* comeToEarthJupiter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8238E605298DDF7D00D9D8BD /* comeToEarthJupiter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		8238E5F1298C7F7300D9D8BD /* CSE335Lab2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSE335Lab2UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8238E600298C806300D9D8BD /* JupiterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JupiterView.swift; sourceTree = "<group>"; };
 		8238E602298C821700D9D8BD /* MoonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonView.swift; sourceTree = "<group>"; };
+		8238E605298DDF7D00D9D8BD /* comeToEarthJupiter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = comeToEarthJupiter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 		8238E5D3298C7F7200D9D8BD /* CSE335Lab2 */ = {
 			isa = PBXGroup;
 			children = (
+				8238E605298DDF7D00D9D8BD /* comeToEarthJupiter.swift */,
 				8238E600298C806300D9D8BD /* JupiterView.swift */,
 				8238E602298C821700D9D8BD /* MoonView.swift */,
 				8238E5D4298C7F7200D9D8BD /* CSE335Lab2App.swift */,
@@ -267,6 +270,7 @@
 				8238E5D7298C7F7200D9D8BD /* EarthView.swift in Sources */,
 				8238E603298C821700D9D8BD /* MoonView.swift in Sources */,
 				8238E5D5298C7F7200D9D8BD /* CSE335Lab2App.swift in Sources */,
+				8238E606298DDF7D00D9D8BD /* comeToEarthJupiter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

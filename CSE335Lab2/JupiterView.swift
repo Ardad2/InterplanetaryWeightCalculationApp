@@ -21,6 +21,8 @@ struct JupiterView: View {
     
     @Binding var rootActive: Bool
 
+    @Binding var returnJupiter: Bool
+
     
     var body: some View {
         
@@ -33,9 +35,9 @@ struct JupiterView: View {
             
             
             VStack {
-                Text("Your weight on Earth is... \(weightEarth)");
-                Text("Your weight on Moon is... \(weightMoon)");
-                Text("Your weight on Jupiter is... \(weightJupiter)");
+                Text("Your weight on Earth is... \(weightEarth) lbs").foregroundColor(.black);
+                Text("Your weight on Moon is... \(weightMoon) lbs").foregroundColor(.black);
+                Text("Your weight on Jupiter is... \(weightJupiter) lbs").foregroundColor(.black);
             }
             
             VStack {
@@ -49,7 +51,9 @@ struct JupiterView: View {
                 Button("Go to Earth")
                 {
                     dataJupiter = 2
+                    returnJupiter = true
                     rootActive = false
+
                 }.padding().foregroundColor(.blue).cornerRadius(10)
             }
         }.navigationBarHidden(true)
@@ -59,7 +63,8 @@ struct JupiterView: View {
     
     struct JupiterView_Previews: PreviewProvider {
         static var previews: some View {
-            JupiterView(weightEarth: 0.0, weightMoon: 0.0, dataJupiter: .constant(2), rootActive: .constant(false));
+            JupiterView(weightEarth: 0.0, weightMoon: 0.0, dataJupiter: .constant(2), rootActive: .constant(false), returnJupiter: .constant(false));
         }
     }
 }
+

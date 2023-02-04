@@ -8,7 +8,6 @@
 import SwiftUI
 
 
-
 struct MoonView: View {
     // access the "dismiss" function from the NavigationView, when called this
     // function will pop the current view from the navigation stack
@@ -20,6 +19,7 @@ struct MoonView: View {
     // this binding allows to send data back to the ContentView
     @Binding var dataMoon: Int
     @Binding var rootActive: Bool
+    @Binding var returnJupiter: Bool
 
     
     @State var comeToMoon: Int = 0;
@@ -39,16 +39,16 @@ struct MoonView: View {
             }
 
             VStack {
-                Text("Your weight on Earth is... \(weightEarth)")
+                Text("Your weight on Earth is... \(weightEarth) lbs")
                 Spacer()
-                Text("Your weight on Moon is... \(weightMoon)")
+                Text("Your weight on Moon is... \(weightMoon) lbs")
                 Spacer()
             }
             
             VStack {
                 Text("I feel much lighter !");
                 Spacer()
-                NavigationLink("Go to Jupiter", destination:                     JupiterView(weightEarth: weightEarth, weightMoon: weightMoon, dataJupiter: $comeToMoon, rootActive: $rootActive).padding()
+                NavigationLink("Go to Jupiter", destination:                     JupiterView(weightEarth: weightEarth, weightMoon: weightMoon, dataJupiter: $comeToMoon, rootActive: $rootActive, returnJupiter: $returnJupiter).padding()
                     .foregroundColor(.blue)
                     .cornerRadius(10)
 )
@@ -64,8 +64,9 @@ struct MoonView: View {
                 
                 Button("Go to Earth") {
                     dataMoon = 1
-                    dismiss()
-                    
+                    returnJupiter = false
+                    rootActive = false
+
                 }.padding()
                     .foregroundColor(.blue)
                     .cornerRadius(10)
@@ -87,6 +88,6 @@ struct MoonView: View {
 
 struct MoonView_Previews: PreviewProvider {
     static var previews: some View {
-        MoonView(weightEarth:1.0, dataMoon: .constant(1), rootActive: .constant(false))
+        MoonView(weightEarth:1.0, dataMoon: .constant(1), rootActive: .constant(false), returnJupiter: .constant(false))
     }
 }
